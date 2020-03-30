@@ -1,0 +1,11 @@
+{
+  "server": true,
+  "datacenter": "sakani-production",
+  "node_name": "server-1",
+  "data_dir": "/consul/data",
+  "log_level": "INFO",
+  "client_addr": "0.0.0.0",
+  "bind_addr": "127.0.0.1",
+  "ui": true,
+  "bootstrap_expect": 1
+}

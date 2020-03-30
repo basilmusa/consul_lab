@@ -1,0 +1,21 @@
+version: '3'
+services:
+  consul:
+    image: consul
+    container_name: consul-server-1
+    volumes:
+      - /vagrant/consul_lab/consul-server-1/config:/consul/config
+      - /vagrant/consul_lab/consul-server-1/data:/consul/data
+    ports:
+      - "8501:8501"
+      - "8500:8500"
+      - "8600:8600/udp"
+    command: agent -config-file=/consul/config/server.json
+
+    #  consul-client-1:
+    #    image: consul
+    #    container_name: consul-client-1
+    #    command: agent -node=client-1 -join=172.19.0.2
+    #    depends_on:
+    #      - consul
+
